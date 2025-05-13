@@ -4,7 +4,7 @@ using sysvendas2.Models;
 
 namespace sysvendas2.Telas;
 
-static class TelaCadastroProduto
+public class TelaCadastroProduto : ShowHeader
 {
     //public static List<Produto> produtos;
     
@@ -17,7 +17,7 @@ static class TelaCadastroProduto
     {
         Console.Clear();
         Console.OutputEncoding = Encoding.UTF8;
-        ExibeTitulo();
+        ShowHeader.Header("CadastroProduto");
         
         string nomeProduto = "";
         string skuProduto = "";
@@ -45,19 +45,4 @@ static class TelaCadastroProduto
         TelaPrincipal.Show();
     }
 
-    private static void ExibeTitulo()
-    {
-        Console.WriteLine("=======================================");
-        Console.WriteLine("====== 🧑‍🦳 CADASTRO DE PRODUTOS 🧑‍🦳======");
-        Console.WriteLine("=======================================");
-    }
 }
-
-/*
-        cliente = new List<Cliente>
-        {
-            new Opcao(1," ❤️ Cadastrar cliente"),
-            new Opcao(2, "Listar clientes"),
-            new Opcao(3, "Sair")
-        };
-*/

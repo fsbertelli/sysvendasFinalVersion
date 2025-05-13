@@ -25,6 +25,7 @@ public class RepositorioClienteJson : IRepositorioCliente
         return new List<Cliente>(_clientes);
     }
     
+
     public Cliente? ObterClienteId(int idcliente)
     {
         return _clientes.FirstOrDefault(c => c.IdCliente == idcliente);

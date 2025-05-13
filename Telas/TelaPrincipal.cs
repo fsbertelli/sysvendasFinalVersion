@@ -2,7 +2,7 @@ namespace sysvendas2.Telas;
 using System.Text;
 using sysvendas2.Models;
 
-static class TelaPrincipal
+public class TelaPrincipal : ShowHeader
 {
     public static List<Opcao> opcoes;
     static TelaPrincipal()
@@ -15,7 +15,7 @@ static class TelaPrincipal
             new Opcao(4, "📋 Listar produtos"),
             new Opcao(5, "📋 Buscar Cliente"),
             new Opcao(6, "📋 Adicionar Pedido"),
-            new Opcao(7, "🚪 Sair")
+            new Opcao(0, "🚪 Sair")
         };
     }
     public static void Show()
@@ -24,7 +24,7 @@ static class TelaPrincipal
         {
             Console.Clear();
             Console.OutputEncoding = Encoding.UTF8;
-            ExibeTitulo();
+            ShowHeader.Header("Principal");
             foreach (var opt in opcoes)
             {
                 Console.WriteLine($"{opt.Id} - {opt.Descricao}");
@@ -59,7 +59,7 @@ static class TelaPrincipal
                     Console.WriteLine("\nAdicionando pedido");
                     TelaCadastroPedido.Show();
                     break;
-                case 7:
+                case 0:
                     Console.WriteLine("\nSaindo...");
                     return;
                 default:
@@ -76,10 +76,5 @@ static class TelaPrincipal
         }
       
     }
-    private static void ExibeTitulo()
-    {
-        Console.WriteLine("=======================================");
-        Console.WriteLine("=========== 🔥 SYSVENDAS 2 🔥==========");
-        Console.WriteLine("=======================================");
-    }
+
 }

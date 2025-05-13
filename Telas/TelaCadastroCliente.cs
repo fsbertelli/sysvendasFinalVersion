@@ -17,14 +17,12 @@ static class TelaCadastroCliente
     {
         Console.Clear();
         Console.OutputEncoding = Encoding.UTF8;
-        ExibeTitulo();
+        ShowHeader.Header("CadastroCliente");
         
         string nomeCliente = "";
         string emailCliente = "";
         string telefoneCliente = "";
-        
-        Console.WriteLine("\nDigite o ID do cliente:");
-        int.TryParse(Console.ReadLine(), out int _idCliente);
+        int idCliente = 0;
         
         Console.WriteLine("\nDigite o nome do cliente:");
         nomeCliente = Console.ReadLine();
@@ -35,8 +33,7 @@ static class TelaCadastroCliente
         Console.WriteLine("\nDigite o telefone do cliente:");
         telefoneCliente = Console.ReadLine();
 
-        Cliente cliente = new Cliente(_idCliente, nomeCliente, emailCliente, telefoneCliente);
-        //clientes.Add(cliente);
+        Cliente cliente = new Cliente(idCliente, nomeCliente, emailCliente, telefoneCliente);
         DBContext.RepositorioClientes.Adicionar(cliente);
         
         Console.WriteLine("Pressione qualquer tecla para continuar...");
@@ -44,19 +41,5 @@ static class TelaCadastroCliente
         TelaPrincipal.Show();
     }
 
-    private static void ExibeTitulo()
-    {
-        Console.WriteLine("=======================================");
-        Console.WriteLine("====== 🧑‍🦳 CADASTRO DE CLIENTES 🧑‍🦳======");
-        Console.WriteLine("=======================================");
-    }
 }
 
-/*
-        cliente = new List<Cliente>
-        {
-            new Opcao(1," ❤️ Cadastrar cliente"),
-            new Opcao(2, "Listar clientes"),
-            new Opcao(3, "Sair")
-        };
-*/

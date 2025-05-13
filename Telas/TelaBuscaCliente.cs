@@ -3,7 +3,7 @@ using sysvendas2.Context;
 
 namespace sysvendas2.Telas;
 
-static class TelaBuscaCliente
+public class TelaBuscaCliente : ShowHeader
 {
     static TelaBuscaCliente()
     {
@@ -13,7 +13,7 @@ static class TelaBuscaCliente
     {
         Console.Clear();
         Console.OutputEncoding = Encoding.UTF8;
-        ExibeTitulo();
+        ShowHeader.Header("BuscaCliente");
 
         Console.Write("Digite o Nome do cliente que deseja buscar: ");
         string nome = Console.ReadLine();
@@ -35,12 +35,5 @@ static class TelaBuscaCliente
         Console.WriteLine("\nPressione qualquer tecla para continuar...");
         Console.ReadKey();
         TelaPrincipal.Show();
-    }
-
-    private static void ExibeTitulo()
-    {
-        Console.WriteLine("=======================================");
-        Console.WriteLine("====== 🔎 BUSCA DE CLIENTE 🔍 ========");
-        Console.WriteLine("=======================================");
     }
 }

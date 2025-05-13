@@ -11,12 +11,12 @@ static class TelaListaProdutos
     {
         Console.Clear();
         Console.OutputEncoding = Encoding.UTF8;
-        ExibeTitulo();
+        ShowHeader.Header("ListaProduto");
         if (DBContext.RepositorioProdutos != null)
             foreach (var produto in DBContext.RepositorioProdutos.ObterTodos())
             {
                 string preco_formatado = produto.PrecoUnit.ToString("C", CultureInfo.CurrentCulture);
-                Console.WriteLine($"{produto.Sku}: {produto.Nome} - {preco_formatado}");
+                Console.WriteLine($"{produto.Sku}: {produto.Nome} - {preco_formatado} - {produto.Desc}dev");
             }
 
         Console.WriteLine("Pressione qualquer tecla para continuar...");
@@ -24,10 +24,5 @@ static class TelaListaProdutos
         TelaPrincipal.Show();
     }
 
-    private static void ExibeTitulo()
-    {
-        Console.WriteLine("=======================================");
-        Console.WriteLine("======= 🧑‍🦳 LISTA DE PRODUTOS 🧑‍🦳========");
-        Console.WriteLine("=======================================");
-    }
+
 }

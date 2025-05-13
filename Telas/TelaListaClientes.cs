@@ -15,7 +15,7 @@ static class TelaListaClientes
     {
         Console.Clear();
         Console.OutputEncoding = Encoding.UTF8;
-        ExibeTitulo();
+        ShowHeader.Header("ListaClientes");
         if (DBContext.RepositorioClientes != null)
             foreach (var cliente in DBContext.RepositorioClientes.ObterTodos())
             {
@@ -27,10 +27,4 @@ static class TelaListaClientes
         TelaPrincipal.Show();
     }
 
-    private static void ExibeTitulo()
-    {
-        Console.WriteLine("=======================================");
-        Console.WriteLine("======= 🧑‍🦳 LISTA DE CLIENTES 🧑‍🦳========");
-        Console.WriteLine("=======================================");
-    }
 }

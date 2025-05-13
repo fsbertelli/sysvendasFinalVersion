@@ -9,7 +9,11 @@ public class Produto
         PrecoUnit = precounit;
         Desc = desc;
     }
-    
+
+    public Produto()
+    {
+    }
+    public int IdProduto { get; set; }
     public string Sku { get; set; }
     public string Nome { get; set; }
     public double PrecoUnit { get; set; }
