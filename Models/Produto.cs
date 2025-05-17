@@ -2,12 +2,13 @@
 
 public class Produto
 {
-    public Produto(string sku, string nome, double precounit, string desc)
+    public Produto(string sku, string nome, double precounit, string descricao, int quantidade)
     {
         Sku = sku;
         Nome = nome;
         PrecoUnit = precounit;
-        Desc = desc;
+        Descricao = descricao;
+        Quantidade = quantidade;
     }
 
     public Produto()
@@ -17,6 +18,7 @@ public class Produto
     public string Sku { get; set; }
     public string Nome { get; set; }
     public double PrecoUnit { get; set; }
-    public string Desc { get; set; }
+    public string Descricao { get; set; }
+    public int Quantidade { get; set; }
 
 }

@@ -15,32 +15,32 @@ namespace sysvendas2.Telas
                 case "Principal":
                     Console.WriteLine("========================================");
                     Console.WriteLine("=========== 🔥 SYSVENDAS 2 🔥 ==========");
-                    Console.WriteLine("========================================");
+                    Console.WriteLine("========================================\n");
                     break;
                 case "BuscaCliente":
                     Console.WriteLine("=======================================");
                     Console.WriteLine("====== 🔎 BUSCA DE CLIENTE 🔍 ========");
-                    Console.WriteLine("=======================================");
+                    Console.WriteLine("=======================================\n");
                     break;
                 case "CadastroCliente":
                     Console.WriteLine("=============================================");
                     Console.WriteLine("====== 🧑‍🦳 CADASTRO DE CLIENTES 🧑‍🦳 ======");
-                    Console.WriteLine("=============================================");
+                    Console.WriteLine("=============================================\n");
                     break;
                 case "ListaCliente":
                     Console.WriteLine("=============================================");
                     Console.WriteLine("======= 🧑‍🦳 LISTA DE CLIENTES 🧑‍🦳 ========");
-                    Console.WriteLine("=============================================");
+                    Console.WriteLine("=============================================\n");
                     break;
                 case "CadastroProduto":
                     Console.WriteLine("=============================================");
                     Console.WriteLine("====== 🧑‍🦳 CADASTRO DE PRODUTOS 🧑‍🦳 ======");
-                    Console.WriteLine("=============================================");
+                    Console.WriteLine("=============================================\n");
                     break;
                 case "ListaProduto":
                     Console.WriteLine("=============================================");
                     Console.WriteLine("======= 🧑‍🦳 LISTA DE PRODUTOS 🧑‍🦳 ========");
-                    Console.WriteLine("=============================================");
+                    Console.WriteLine("=============================================\n");
                     break;
 
             }

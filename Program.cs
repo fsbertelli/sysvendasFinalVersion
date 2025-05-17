@@ -8,7 +8,7 @@ using sysvendas2.Models;
 //DBContext.RepositorioProdutos = new RepositorioProdutoJson("produtos.json");
 DBContext.RepositorioPedidos = new RepositorioPedidoJson("pedidos.json");
 
-var connStr = "Host=localhost;Port=32770;Username=postgres;Password=capoeirarosa;Database=dev";
+var connStr = "Host=localhost;Port=32768;Username=postgres;Password=capoeirarosa;Database=dev";
 DBContext.RepositorioClientes = new RepositorioClientePostgres(connStr);
 DBContext.RepositorioProdutos = new RepositorioProdutoPostgres(connStr);
 

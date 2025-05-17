@@ -22,6 +22,7 @@ public class TelaCadastroProduto : ShowHeader
         string nomeProduto = "";
         string skuProduto = "";
         string descProduto = "";
+        int qtyProduto = 0;
         
         Console.WriteLine("\nDigite o SKU do Produto:");
         skuProduto = Console.ReadLine();
@@ -35,8 +36,10 @@ public class TelaCadastroProduto : ShowHeader
         Console.WriteLine("Digite o Preco Unitário do Produto:");
         double.TryParse(Console.ReadLine(), out double _precoUnitProduto);
         
-        
-        Produto produto = new Produto(skuProduto, nomeProduto, _precoUnitProduto, descProduto);
+        Console.WriteLine("Digite a Quantidade do Produto:");
+        int.TryParse(Console.ReadLine(), out qtyProduto);
+
+        Produto produto = new Produto(skuProduto, nomeProduto, _precoUnitProduto, descProduto, qtyProduto);
         //produtos.Add(produto);
         DBContext.RepositorioProdutos.Adicionar(produto);
         

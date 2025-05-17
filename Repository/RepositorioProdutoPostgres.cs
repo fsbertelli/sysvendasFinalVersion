@@ -29,7 +29,9 @@ namespace sysvendas2.Repository
                     Sku TEXT NOT NULL,
                     Nome TEXT NOT NULL,
                     PrecoUnit DOUBLE PRECISION NOT NULL,
-                    Descricao TEXT NOT NULL
+                    Descricao TEXT NOT NULL,
+                    Quantidade INT NOT NULL
+                    
                 );";
                 using var conn = new NpgsqlConnection(_connStr);
                 conn.Execute(sql);
@@ -49,7 +51,7 @@ namespace sysvendas2.Repository
 
             try
             {
-                var sql = "INSERT INTO Produtos (Sku, Nome, PrecoUnit, Descricao) VALUES (@Sku, @Nome, @PrecoUnit, @Desc)";
+                var sql = "INSERT INTO Produtos (Sku, Nome, PrecoUnit, Descricao, Quantidade) VALUES (@Sku, @Nome, @PrecoUnit, @Descricao, @Quantidade)";
                 using var conn = new NpgsqlConnection(_connStr);
                 conn.Execute(sql, produto);
                 Console.WriteLine($"\nProduto {produto.Nome} cadastrado com sucesso!");
@@ -59,6 +61,7 @@ namespace sysvendas2.Repository
             }
             catch (Exception ex) {
                 Console.WriteLine($"Erro ao adicionar o produto {produto.Nome}");
+                Console.WriteLine($"Detalhes do erro: {ex.Message}");
                 Console.WriteLine("Pressione qualquer tecla para continuar...");
                 Console.ReadKey();
                 TelaPrincipal.Show();
