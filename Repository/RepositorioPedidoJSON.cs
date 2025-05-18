@@ -20,6 +20,11 @@ public class RepositorioPedidoJson : IRepositorioPedido
         SalvarNoArquivo();
     }
 
+    public void AtualizarStatus(int idPedido, string novoStatus)
+    {
+        throw new NotImplementedException();
+    }
+
     public List<Pedido> ObterTodos()
     {
         return new List<Pedido>(_pedidos);

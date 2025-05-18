@@ -2,6 +2,7 @@
 
 public class Pedido
 {
+    public Pedido() { }
     public Pedido(int idpedido, DateTime data, Cliente cliente, string status)
     {
         IdPedido = idpedido;

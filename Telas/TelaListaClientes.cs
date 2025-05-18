@@ -17,10 +17,11 @@ static class TelaListaClientes
         Console.OutputEncoding = Encoding.UTF8;
         ShowHeader.Header("ListaClientes");
         if (DBContext.RepositorioClientes != null)
+            Console.WriteLine("ID | Nome | Email | Telefone");
             foreach (var cliente in DBContext.RepositorioClientes.ObterTodos())
-            {
-                Console.WriteLine($"{cliente.IdCliente}: {cliente.Nome} - {cliente.Email}");
-            }
+                {
+                    Console.WriteLine($"{cliente.IdCliente} | {cliente.Nome} | {cliente.Email} | {cliente.Telefone}");
+                }
 
         Console.WriteLine("Pressione qualquer tecla para continuar...");
         Console.ReadKey();

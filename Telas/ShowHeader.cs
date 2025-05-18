@@ -42,7 +42,26 @@ namespace sysvendas2.Telas
                     Console.WriteLine("======= 🧑‍🦳 LISTA DE PRODUTOS 🧑‍🦳 ========");
                     Console.WriteLine("=============================================\n");
                     break;
-
+                case "ConcluirPedido":
+                    Console.WriteLine("=============================================");
+                    Console.WriteLine("====== 🧑‍🦳 CONCLUIR PEDIDO 🧑‍🦳 ======");
+                    Console.WriteLine("=============================================\n");
+                    break;
+                case "ListaItensPedido":
+                    Console.WriteLine("=============================================");
+                    Console.WriteLine("====== 🧑‍🦳 LISTA DE ITENS PEDIDO 🧑‍🦳 ======");
+                    Console.WriteLine("=============================================\n");
+                    break;
+                case "ListaPedidos":
+                    Console.WriteLine("=============================================");
+                    Console.WriteLine("====== 🧑‍🦳 LISTA DE PEDIDOS 🧑‍🦳 ======");
+                    Console.WriteLine("=============================================\n");
+                    break;
+                case "CadastroPedido":
+                    Console.WriteLine("=============================================");
+                    Console.WriteLine("====== 🧑‍🦳 CADASTRO DE PEDIDOS 🧑‍🦳 ======");
+                    Console.WriteLine("=============================================\n");
+                    break;
             }
 
         }

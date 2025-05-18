@@ -4,5 +4,6 @@ using sysvendas2.Models;
 public interface IRepositorioPedido
 {
     void Adicionar(Pedido pedido);
-    List<Pedido> ObterTodos(); 
+    List<Pedido> ObterTodos();
+    void AtualizarStatus(int idPedido, string novoStatus);
 }
